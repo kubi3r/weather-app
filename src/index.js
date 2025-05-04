@@ -11,5 +11,9 @@ form.addEventListener('submit', (e) => {
 	getWeather(locationInput.value).then((weather) => {
 		console.log(weather);
 		console.log(parseWeather(weather));
+
+		import(`./icons/${weather.currentConditions.icon}.svg`).then((icon) => {
+			document.querySelector('img').src = icon.default;
+		});
 	});
 });
