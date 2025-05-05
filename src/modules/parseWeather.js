@@ -1,6 +1,7 @@
 export default function (weatherData) {
+	console.log(weatherData.currentConditions.feelslike);
 	const parsedData = {
-		address: weatherData.address,
+		location: weatherData.resolvedAddress,
 		description: weatherData.description,
 		feelslike: weatherData.currentConditions.feelslike,
 		temp: weatherData.currentConditions.temp,
